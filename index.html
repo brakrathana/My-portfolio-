@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website showcasing skills, experience, and projects">
+    <meta name="description" content="Professional Portfolio - John Doe | Frontend Developer">
+    <meta name="keywords" content="portfolio, frontend developer, web developer, UI/UX">
+    <meta name="author" content="John Doe">
     <title>John Doe | Frontend Developer</title>
-    <link rel="stylesheet" href="style.css">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,167 +25,207 @@
 <body>
     <!-- Loading Animation -->
     <div class="loader">
-        <div class="spinner"></div>
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
     </div>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </button>
-    
-    <!-- Dark/Light Mode Toggle -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
     </button>
-    
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#home" class="logo">John<span>Doe</span></a>
+            <a href="#home" class="logo">JD</a>
             
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu toggle" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
             
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About Me</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link">Contact Me</a></li>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#resume" class="nav-link" role="menuitem">Resume</a></li>
+                <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
         </div>
     </nav>
-    
-    <!-- Home Section -->
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-subtitle">Hello, I'm</h2>
-                <h1 class="hero-title">John Doe</h1>
-                <div class="typing-effect">
-                    <span id="typed-text"></span><span class="cursor">|</span>
+                <h1 class="hero-subtitle">Hello, I'm</h1>
+                <h2 class="hero-title">John Doe</h2>
+                <div class="typing-container">
+                    <span class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
                 </div>
-                <p class="hero-description">A passionate Frontend Developer creating beautiful, functional websites with clean code and modern design principles.</p>
+                <p class="hero-description">A passionate Frontend Developer specializing in creating beautiful, functional, and user-friendly web experiences.</p>
                 <div class="hero-buttons">
                     <a href="#resume" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
         </div>
-        <a href="#about" class="scroll-down" aria-label="Scroll down">
-            <i class="fas fa-chevron-down"></i>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <span class="scroll-text">Scroll</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
         </a>
     </section>
-    
+
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">Get to know me better</p>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+                <div class="section-divider"></div>
+            </div>
             
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="John Doe - Frontend Developer">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="John Doe" loading="lazy">
+                    </div>
                 </div>
                 
                 <div class="about-info">
-                    <h3>Frontend Developer & UI/UX Enthusiast</h3>
-                    <p>I'm a dedicated frontend developer with 5+ years of experience creating responsive, user-friendly websites and applications. I specialize in HTML, CSS, JavaScript, and modern frameworks like React.</p>
+                    <h3>Frontend Developer & UI/UX Specialist</h3>
+                    <p class="about-text">I specialize in creating responsive, accessible, and performant web applications using modern technologies. With 5+ years of experience, I bring ideas to life through clean code and innovative solutions.</p>
                     
                     <div class="skills">
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>HTML/CSS</span>
-                                <span>90%</span>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">90%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="90"></div>
                             </div>
                         </div>
                         
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>JavaScript</span>
-                                <span>85%</span>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percent">85%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="85"></div>
                             </div>
                         </div>
                         
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>React</span>
-                                <span>80%</span>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">UI/UX Design</span>
+                                <span class="skill-percent">80%</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="80"></div>
                             </div>
                         </div>
-                        
-                        <div class="skill">
-                            <div class="skill-info">
-                                <span>UI/UX Design</span>
-                                <span>75%</span>
+                    </div>
+                    
+                    <div class="personal-info">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <span class="info-label">Name:</span>
+                                    <span class="info-value">John Doe</span>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="75"></div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="info-label">Email:</span>
+                                    <span class="info-value">john.doe@example.com</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="info-label">Phone:</span>
+                                    <span class="info-value">+1 (234) 567-8900</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="info-label">Location:</span>
+                                    <span class="info-value">San Francisco, CA</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <span class="info-label">Freelance:</span>
+                                    <span class="info-value available">Available</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">5+ Years</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="personal-details">
-                        <div class="detail">
-                            <span><i class="fas fa-user"></i> Age:</span>
-                            <span>28</span>
-                        </div>
-                        <div class="detail">
-                            <span><i class="fas fa-envelope"></i> Email:</span>
-                            <span>john.doe@example.com</span>
-                        </div>
-                        <div class="detail">
-                            <span><i class="fas fa-phone"></i> Phone:</span>
-                            <span>+1 (123) 456-7890</span>
-                        </div>
-                        <div class="detail">
-                            <span><i class="fas fa-map-marker-alt"></i> Location:</span>
-                            <span>New York, USA</span>
-                        </div>
-                        <div class="detail">
-                            <span><i class="fas fa-briefcase"></i> Freelance:</span>
-                            <span class="available">Available</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="btn btn-primary download-btn">
+                    <a href="resume.pdf" class="btn btn-primary download-btn" download>
                         <i class="fas fa-download"></i> Download CV
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Resume Section -->
     <section id="resume" class="section resume">
         <div class="container">
-            <h2 class="section-title">My Resume</h2>
-            <p class="section-subtitle">Education & Experience</p>
+            <div class="section-header">
+                <h2 class="section-title">My Resume</h2>
+                <p class="section-subtitle">Education & Experience</p>
+                <div class="section-divider"></div>
+            </div>
             
             <div class="resume-content">
                 <div class="resume-column">
-                    <h3 class="resume-column-title">
-                        <i class="fas fa-graduation-cap"></i> Education
-                    </h3>
+                    <div class="resume-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                    </div>
                     
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-date">2020 - 2022</div>
                             <div class="timeline-content">
-                                <h4>Master in Computer Science</h4>
+                                <h4>Master of Computer Science</h4>
                                 <h5>Stanford University</h5>
                                 <p>Specialized in Human-Computer Interaction and Web Technologies. Graduated with honors.</p>
                             </div>
@@ -192,7 +234,7 @@
                         <div class="timeline-item">
                             <div class="timeline-date">2016 - 2020</div>
                             <div class="timeline-content">
-                                <h4>Bachelor in Software Engineering</h4>
+                                <h4>Bachelor of Software Engineering</h4>
                                 <h5>MIT</h5>
                                 <p>Focus on frontend development, UI/UX design principles, and responsive web design.</p>
                             </div>
@@ -201,9 +243,10 @@
                 </div>
                 
                 <div class="resume-column">
-                    <h3 class="resume-column-title">
-                        <i class="fas fa-briefcase"></i> Experience
-                    </h3>
+                    <div class="resume-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Experience</h3>
+                    </div>
                     
                     <div class="timeline">
                         <div class="timeline-item">
@@ -240,28 +283,40 @@
                 <div class="skills-category">
                     <h3>Technical Skills</h3>
                     <div class="skills-list">
-                        <div class="skill-item">
-                            <span>HTML5</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>HTML5</span>
+                                <span>95%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 95%"></div>
+                                <div class="skill-progress-fill" data-width="95"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>CSS3/SCSS</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>CSS3/SCSS</span>
+                                <span>90%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 90%"></div>
+                                <div class="skill-progress-fill" data-width="90"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>88%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 88%"></div>
+                                <div class="skill-progress-fill" data-width="88"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>React.js</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>React.js</span>
+                                <span>85%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 85%"></div>
+                                <div class="skill-progress-fill" data-width="85"></div>
                             </div>
                         </div>
                     </div>
@@ -270,28 +325,40 @@
                 <div class="skills-category">
                     <h3>Professional Skills</h3>
                     <div class="skills-list">
-                        <div class="skill-item">
-                            <span>Communication</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Communication</span>
+                                <span>92%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 92%"></div>
+                                <div class="skill-progress-fill" data-width="92"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>Problem Solving</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Problem Solving</span>
+                                <span>90%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 90%"></div>
+                                <div class="skill-progress-fill" data-width="90"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>Teamwork</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Teamwork</span>
+                                <span>88%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 88%"></div>
+                                <div class="skill-progress-fill" data-width="88"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <span>Project Management</span>
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Project Management</span>
+                                <span>80%</span>
+                            </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress-fill" style="width: 80%"></div>
+                                <div class="skill-progress-fill" data-width="80"></div>
                             </div>
                         </div>
                     </div>
@@ -299,109 +366,129 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="section testimonials">
         <div class="container">
-            <h2 class="section-title">Testimonials</h2>
-            <p class="section-subtitle">What clients say about my work</p>
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What clients say about my work</p>
+                <div class="section-divider"></div>
+            </div>
             
-            <div class="testimonials-carousel">
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <p>"John transformed our website into a modern, user-friendly platform. His attention to detail and technical expertise exceeded our expectations. Highly recommended!"</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Sarah Johnson">
-                                <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <p>Marketing Director, TechCorp</p>
+            <div class="testimonials-container">
+                <div class="testimonials-slider">
+                    <div class="testimonial-slides">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
                                 </div>
-                            </div>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">"John transformed our website into a modern, user-friendly platform. His attention to detail and technical expertise exceeded our expectations. Highly recommended!"</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Sarah Johnson" loading="lazy">
+                                        <div class="author-info">
+                                            <h4>Sarah Johnson</h4>
+                                            <p>Marketing Director, TechCorp</p>
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <p>"Working with John was a pleasure. He delivered our project on time and within budget. His frontend skills are top-notch, and he communicates effectively throughout the process."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Michael Chen">
-                                <div class="author-info">
-                                    <h4>Michael Chen</h4>
-                                    <p>CEO, StartupXYZ</p>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
                                 </div>
-                            </div>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">"Working with John was a pleasure. He delivered our project on time and within budget. His frontend skills are top-notch, and he communicates effectively throughout the process."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Michael Chen" loading="lazy">
+                                        <div class="author-info">
+                                            <h4>Michael Chen</h4>
+                                            <p>CEO, StartupXYZ</p>
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <div class="testimonial-text">
-                                <p>"John's ability to translate complex design requirements into functional code is impressive. He's responsive, professional, and produces high-quality work. We'll definitely work with him again."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Emily Rodriguez">
-                                <div class="author-info">
-                                    <h4>Emily Rodriguez</h4>
-                                    <p>Product Manager, DesignStudio</p>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
                                 </div>
-                            </div>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">"John's ability to translate complex design requirements into functional code is impressive. He's responsive, professional, and produces high-quality work. We'll definitely work with him again."</p>
+                                    <div class="testimonial-author">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Emily Rodriguez" loading="lazy">
+                                        <div class="author-info">
+                                            <h4>Emily Rodriguez</h4>
+                                            <p>Product Manager, DesignStudio</p>
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-nav">
-                    <button class="testimonial-arrow prev" aria-label="Previous testimonial">
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Previous testimonial">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <div class="testimonial-dots">
+                    <div class="slider-dots">
                         <span class="dot active" data-slide="0"></span>
                         <span class="dot" data-slide="1"></span>
                         <span class="dot" data-slide="2"></span>
                     </div>
-                    <button class="testimonial-arrow next" aria-label="Next testimonial">
+                    <button class="slider-btn next" aria-label="Next testimonial">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="section-subtitle">Let's work together</p>
+            <div class="section-header">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Let's work together</p>
+                <div class="section-divider"></div>
+            </div>
             
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p>I'm available for freelance projects and full-time opportunities. Feel free to contact me if you have any questions or would like to discuss a project.</p>
+                    <p class="contact-description">I'm available for freelance projects and full-time opportunities. Feel free to contact me if you have any questions or would like to discuss a project.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -410,7 +497,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p>+1 (123) 456-7890</p>
+                                <p>+1 (234) 567-8900</p>
                             </div>
                         </div>
                         
@@ -430,25 +517,35 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Location</h4>
-                                <p>New York, USA</p>
+                                <p>San Francisco, California</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="social-links">
-                        <h4>Follow Me</h4>
+                    <div class="social-connect">
+                        <h4>Connect With Me</h4>
                         <div class="social-icons">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Dribbble">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" novalidate>
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                             <div class="error-message" id="nameError"></div>
@@ -469,20 +566,23 @@
                             <div class="error-message" id="messageError"></div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                         <div id="formSuccess" class="success-message"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <a href="#home" class="logo">John<span>Doe</span></a>
+                    <a href="#home" class="logo">John Doe</a>
                     <p>Frontend Developer creating beautiful, functional websites with modern technologies.</p>
                 </div>
                 
@@ -490,25 +590,27 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#resume">Resume</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> New York, USA</p>
-                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
-                    <p><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to my newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> John Doe. All rights reserved.</p>
                 <div class="footer-social">
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -516,7 +618,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
